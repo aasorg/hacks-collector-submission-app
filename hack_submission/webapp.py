@@ -25,7 +25,7 @@ def index():
 
 def github_authorize():
     data = {'client_id': CLIENT_ID,
-            'scope': 'repo'}
+            'scope': 'public_repo'}
     pr = requests.Request('GET', GITHUB_AUTH_URL, params=data).prepare()
 
     return pr.url
